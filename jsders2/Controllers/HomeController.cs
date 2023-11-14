@@ -17,7 +17,14 @@ namespace jsders2.Controllers
         {
             return View();
         }
-
+        public IActionResult DersOn()
+        {
+            return View();
+        }
+        public IActionResult DersOnBir()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,22 @@
+﻿
+
+<input type="text" id="vize1" placeholder="Vize1"/>
+<input type="text" id="vize2" placeholder="Vize2" />
+<input type="text" id="final" placeholder="Final" />
+<input type="text" id="but" placeholder="Vize1"/>
+<span id="ortalama"></span>
+<button onclick="Hesapla()">Hesapla</button>
+<script>    
+
+    function Hesapla() {
+        var vize1 = document.getElementById("vize1").value;
+        var vize2 = document.getElementById("vize2").value;
+        var final = document.getElementById("final").value;
+        var but = document.getElementById("but").value;
+
+        var ort = (Number(vize1*0.2) + Number(vize2*0.2) + Number(final*0.4) + Number(but*0.4)) / 4;
+        document.getElementById("ortalama").innerHTML = ort;
+
+
+    }
+</script>
