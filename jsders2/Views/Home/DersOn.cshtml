@@ -1,9 +1,9 @@
-﻿
+﻿<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <input type="text" id="vize1" placeholder="Vize1"/>
 <input type="text" id="vize2" placeholder="Vize2" />
 <input type="text" id="final" placeholder="Final" />
-<input type="text" id="but" placeholder="Vize1"/>
+<input type="text" id="but" placeholder="But"/>
 <span id="ortalama"></span>
 <button onclick="Hesapla()">Hesapla</button>
 <script>    
@@ -13,8 +13,20 @@
         var vize2 = document.getElementById("vize2").value;
         var final = document.getElementById("final").value;
         var but = document.getElementById("but").value;
-
-        var ort = (Number(vize1*0.2) + Number(vize2*0.2) + Number(final*0.4) + Number(but*0.4)) / 4;
+        var ort = (Number(vize1 * 0.2) + Number(vize2 * 0.2) + Number(final * 0.4));
+        if (final < 50) {
+           
+            Swal.fire("Final notunuz 50 nin altında olduğu için bütünleme sınavına girmelisiniz");
+         
+        }
+        else if(but< 50 && final==0)
+        {
+            var ort = (Number(vize1 * 0.2) + Number(vize2 * 0.2) + Number(but * 0.4));
+            if (ort < 50) {
+                Swal.fire("Dersten Kaldınız");
+            }
+        }
+        
         document.getElementById("ortalama").innerHTML = ort;
 
 

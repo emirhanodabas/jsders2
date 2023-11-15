@@ -1,0 +1,48 @@
+﻿<p>
+    <span>
+        1.Oyuncu
+    </span>
+    <span id="Player1" style="color:red">
+    </span>
+</p>
+<p>
+    <span>
+        2.Oyuncu
+    </span>
+    <span id="Player2" style="color:blue">
+    </span>
+</p>
+<p>
+    <span>
+       Result
+    </span>
+    <span id="result" style="color:green">
+    </span>
+</p>
+<button onclick="ZarAt()">ZarAt</button>
+<script>
+    function ZarAt() {
+        var P1zar1 = (Math.floor(Math.random() * 6)) + 1;
+        var P1zar2 = (Math.floor(Math.random() * 6)) + 1;
+
+        var P2zar1 = (Math.floor(Math.random() * 6)) + 1;
+        var P2zar2 = (Math.floor(Math.random() * 6)) + 1;
+
+        var p1 = document.getElementById("Player1");
+        var p2 = document.getElementById("Player2");
+
+        p1 = P1zar1 + P2zar1;
+        p2 = P2zar1 + P2zar2;
+        document.getElementById("Player1").innerHTML = "=" + p1;
+        document.getElementById("Player2").innerHTML = "=" + p2;
+        if (p1 > p2) {
+            document.getElementById("result").innerHTML = "=" + p1 + "  ile oyuncu 1 kazandı";
+        }
+        else if (p2 > p1) {
+            document.getElementById("result").innerHTML = "=" + p2 + "  ile oyuncu 2 kazandı";
+        }
+        else {
+            document.getElementById("result").innerHTML = " = durum berabere";
+        }
+    }
+</script>
