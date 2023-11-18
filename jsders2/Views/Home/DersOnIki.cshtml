@@ -1,48 +1,97 @@
-﻿<p>
-    <span>
-        1.Oyuncu
-    </span>
-    <span id="Player1" style="color:red">
-    </span>
-</p>
-<p>
-    <span>
-        2.Oyuncu
-    </span>
-    <span id="Player2" style="color:blue">
-    </span>
-</p>
-<p>
-    <span>
-       Result
-    </span>
-    <span id="result" style="color:green">
-    </span>
-</p>
-<button onclick="ZarAt()">ZarAt</button>
-<script>
-    function ZarAt() {
-        var P1zar1 = (Math.floor(Math.random() * 6)) + 1;
-        var P1zar2 = (Math.floor(Math.random() * 6)) + 1;
-
-        var P2zar1 = (Math.floor(Math.random() * 6)) + 1;
-        var P2zar2 = (Math.floor(Math.random() * 6)) + 1;
-
-        var p1 = document.getElementById("Player1");
-        var p2 = document.getElementById("Player2");
-
-        p1 = P1zar1 + P2zar1;
-        p2 = P2zar1 + P2zar2;
-        document.getElementById("Player1").innerHTML = "=" + p1;
-        document.getElementById("Player2").innerHTML = "=" + p2;
-        if (p1 > p2) {
-            document.getElementById("result").innerHTML = "=" + p1 + "  ile oyuncu 1 kazandı";
-        }
-        else if (p2 > p1) {
-            document.getElementById("result").innerHTML = "=" + p2 + "  ile oyuncu 2 kazandı";
-        }
-        else {
-            document.getElementById("result").innerHTML = " = durum berabere";
-        }
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zar Oyunu</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
     }
-</script>
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body>
+
+  <h1>Zar Oyunu</h1>
+
+  <table>
+    <tr>
+      <th>Oyuncu</th>
+      <th>Zar</th>
+      <th>Result</th>
+      <th>Puan</th>
+    </tr>
+    <tr>
+      <td>1.Oyuncu</td>
+      <td id="Player1"></td>
+      <td id="result1"></td>
+      <td id="p1puan"></td>
+    </tr>
+    <tr>
+      <td>2.Oyuncu</td>
+      <td id="Player2"></td>
+      <td id="result2"></td>
+      <td id="p2puan"></td>
+    </tr>
+  </table>
+<br>
+  <button onclick="ZarAt()">Zar At</button>
+
+  <script>
+    var p1Puan = 0;
+    var p2Puan = 0;
+
+    function ZarAt() {
+      var P1zar1 = Math.floor(Math.random() * 6) + 1;
+      var P1zar2 = Math.floor(Math.random() * 6) + 1;
+
+      var P2zar1 = Math.floor(Math.random() * 6) + 1;
+      var P2zar2 = Math.floor(Math.random() * 6) + 1;
+
+      var p1 = P1zar1 + P1zar2;
+      var p2 = P2zar1 + P2zar2;
+
+      document.getElementById("Player1").innerHTML = p1;
+      document.getElementById("Player2").innerHTML = p2;
+
+      if (p1Puan <= 100 || p2Puan <= 100) {
+        if (p1 > p2) {
+          document.getElementById("result1").innerHTML = "Oyuncu 1 kazandı";
+          document.getElementById("result2").innerHTML = "Oyuncu 2 kaybetti";
+          p1Puan += 10;
+          document.getElementById("p1puan").innerHTML = p1Puan;
+        } else if (p2 > p1) {
+          document.getElementById("result1").innerHTML = "Oyuncu 1 kaybetti";
+          document.getElementById("result2").innerHTML = "Oyuncu 2 kazandı";
+          p2Puan += 10;
+          document.getElementById("p2puan").innerHTML = p2Puan;
+        } else {
+          document.getElementById("result1").innerHTML = "Durum berabere";
+          document.getElementById("result2").innerHTML = "Durum berabere";
+        }
+
+        if (p1Puan === 100) {
+          Swal.fire("1.Oyuncu Kazandı");
+          p1Puan = 0;
+          p2Puan = 0;
+          document.getElementById("p1puan").innerHTML = p1Puan;
+          document.getElementById("p2puan").innerHTML = p2Puan;
+        } else if (p2Puan === 100) {
+          Swal.fire("2.Oyuncu Kazandı");
+          p1Puan = 0;
+          p2Puan = 0;
+          document.getElementById("p1puan").innerHTML = p1Puan;
+          document.getElementById("p2puan").innerHTML = p2Puan;
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
