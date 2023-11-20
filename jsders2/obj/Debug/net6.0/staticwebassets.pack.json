@@ -245,6 +245,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\GMROBOTİK_01\\Desktop\\emirhan\\jsders2\\jsders2\\wwwroot\\pic\\hamburger.jpg",
+      "PackagePath": "staticwebassets\\pic\\hamburger.jpg"
+    },
+    {
+      "Id": "C:\\Users\\GMROBOTİK_01\\Desktop\\emirhan\\jsders2\\jsders2\\wwwroot\\pic\\kebap.jpg",
+      "PackagePath": "staticwebassets\\pic\\kebap.jpg"
+    },
+    {
+      "Id": "C:\\Users\\GMROBOTİK_01\\Desktop\\emirhan\\jsders2\\jsders2\\wwwroot\\pic\\lahmacun.jpg",
+      "PackagePath": "staticwebassets\\pic\\lahmacun.jpg"
+    },
+    {
+      "Id": "C:\\Users\\GMROBOTİK_01\\Desktop\\emirhan\\jsders2\\jsders2\\wwwroot\\pic\\p1.jpg",
+      "PackagePath": "staticwebassets\\pic\\p1.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.jsders2.props",
       "PackagePath": "build\\jsders2.props"
     },

@@ -29,6 +29,12 @@ namespace jsders2.Controllers
         {
             return View();
         }
+
+        public IActionResult Bootstrap()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
