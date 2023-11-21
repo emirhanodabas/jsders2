@@ -1,4 +1,4 @@
-﻿<div id="carouselExample" class="carousel slide" >
+﻿<div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="~/pic/hamburger.jpg" class="d-block w-100" alt="...">
@@ -19,39 +19,161 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
 <div class="row">
-    <div class="col-4 p-2">
+    <div class="col-4 p-4">
         <div class="card">
             <img class="card-img-top" src="~/pic/hamburger.jpg" alt="Card image">
             <div class="card-body">
-                <h4 class="card-title">Hamburger </h4>
+                <h4 class="card-title">Hamburger</h4>
                 <p class="card-text">Dünyaca bilindik lezzetler</p>
-                <a href="#" class="btn btn-primary">Sipariş Ver</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hamburger">
+                    Sipariş Ver
+                </button>
             </div>
+            <div class="modal fade" id="hamburger" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Hamburger</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            Siparişiniz Verildi 25-30dk içinde masanızda olacaktır.
+                            <br />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Sipariş Miktarı </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Onayla</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="col-4 p-2">
+
+    <div class="col-4 p-4">
         <div class="card">
             <img class="card-img-top" src="~/pic/lahmacun.jpg" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title">Lahmacun</h4>
                 <p class="card-text">Dünyaca bilindik lezzetler</p>
-                <a href="#" class="btn btn-primary">Sipariş Ver</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lahmacun">
+                    Sipariş Ver
+                </button>
+            </div>
+            <div class="modal fade" id="lahmacun" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Lahmacun</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          
+                            <div class="modal-body">
+                                Siparişiniz Verildi 25-30dk içinde masanızda olacaktır.
+                                <br />
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Sipariş Miktarı </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="number" class="form-control" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Onayla</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-4 p-2">
-        <div class="card" >
+    <div class="col-4 p-4">
+        <div class="card">
             <img class="card-img-top" src="~/pic/kebap.jpg" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title">Kebap</h4>
                 <p class="card-text">Dünyaca bilindik lezzetler</p>
-                <a href="#" class="btn btn-primary">Sipariş Ver</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kebap">
+                    Sipariş Ver
+                </button>
             </div>
+            <div class="modal fade" id="kebap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Kebap</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            Siparişiniz Verildi 25-30dk içinde masanızda olacaktır.
+                            <br />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">Sipariş Miktarı </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Onayla</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
+
 </div>
-
-
+<div class="row">
+    <div class="col-4 p-4">
+        <img src="~/pic/kullanıcı1.png" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+    <div class="col-4 p-4">
+        <img src="~/pic/kullanıcı2.png" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+    <div class="col-4 p-4">
+        <img src="~/pic/kullanıcı4.jpg" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+</div>
 

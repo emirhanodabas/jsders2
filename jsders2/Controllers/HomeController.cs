@@ -34,7 +34,10 @@ namespace jsders2.Controllers
         {
             return View();
         }
-
+        public IActionResult Siparis()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
