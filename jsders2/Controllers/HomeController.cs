@@ -38,6 +38,10 @@ namespace jsders2.Controllers
         {
             return View();
         }
+        public IActionResult Kaydet(string adiniz, string email, string mesaj,string konu)
+        {
+            return View("Bootstrap");
+        }
         public IActionResult Privacy()
         {
             return View();
